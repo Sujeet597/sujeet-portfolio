@@ -4,7 +4,7 @@
    --header-height: 3rem;
 
    /*===================== color============== */
-   --hue-color: 250;/*purple 250 - Green 142 - Blue 230 -pink 340 */
+   --hue-color: 238;/*purple 250 - Green 142 - Blue 230 -pink 340 */
    --first-color: hsl(var(--hue-color), 69%, 61%);
    --first-color-second: hsl(var(--hue-color), 69%, 61%);
    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -102,7 +102,7 @@
  }
 
  h1, h2, h3, h4{
-   color: var(--text-color);
+   color: var(--title-color);
    font-weight: var(--font-semi-bold);
  }
 
@@ -316,13 +316,13 @@
  }
 
  .home_description{
-  margin-bottom: var(--mb-1);
+  margin-bottom: var(--mb-2);
 
  }
 
 
  .home_scroll{
-
+ display: none;
  }
 
  .home_scroll-button{
@@ -373,6 +373,8 @@
 }
 
 
-.button-flex{
+.button--flex{
   display:inline-flex;
+ align-items: center;
+
 }
