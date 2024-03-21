@@ -91,7 +91,7 @@ const modalViews = document.querySelectorAll('.services_modal'),
       /*===================PORTFOLIO SWIPER =================*/
 
       
-    let swiper = new Swiper('.swiper-container', {
+    let swiperPortfolio = new Swiper('.swiper-container', {
       cssMode: true,
       loop: true,
       navigation: {
@@ -107,5 +107,23 @@ const modalViews = document.querySelectorAll('.services_modal'),
     });
      
 
-     
+    /*=============== TESTIMONIAL =============*/
+
+    let swiperTestimonoal = new Swiper('.swiper', {
+      
+      grabCursor:true,
+      loop: true,
+      spaceBetween: 48,
+      
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dybanimcsBullets: true,
+      },
+      breakPoint: {
+         568:{
+            slidesPerView: 2,
+         }
+      }
+    });
 
