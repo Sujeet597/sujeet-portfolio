@@ -16,14 +16,14 @@
 </head>
 <body>
    <!--=========== header ============= -->
-   <header class="header">
+   <header class="header" id="header">
       <nav class="nav container">
          <a href="#" class="nav_logo">Sujeet</a>
 
          <div class="nav_menu" id="nav-menu">
             <ul class="nav_list grid">
                <li class="nav_item">
-                  <a href="#home" class="nav_link">
+                  <a href="#home" class="nav_link active-link">
                      <i class=" nav_icon uil uil-estate"></i> Home
                   </a>
                </li>
@@ -33,7 +33,7 @@
                   </a>
                </li>
                <li class="nav_item">
-                  <a href="#skils" class="nav_link">
+                  <a href="#skills" class="nav_link">
                      <i class=" nav_icon uil uil-file-info-alt"></i> Skills
                   </a>
                </li>
@@ -57,6 +57,8 @@
          </div>
 
          <div class="nav_btns">
+            <!-- Theme Change button -->
+            <i class="uil uil-moon change-theme" id="theme-button"></i>
             <div class="nav_toggle" id="nav-toggle">
                <i class="uil uil-apps"></i>
             </div>
@@ -118,9 +120,6 @@
                </a>
             </div>
          </div>
-      </section>
-      <section class="about section" id="about">
-                
       </section>
       <!-- =================== ABOUT =================== -->
       <section class="about section" id="about">
@@ -279,7 +278,7 @@
       </section>
 
       <!--==================== QUALIFICATION ====================-->
-      <section class="qualification section">
+      <section class="qualification section" id="qualification">
           <h2 class="section_title">Qualification</h2>
           <span class="section_subtitle"></span>
 
@@ -541,7 +540,7 @@
       </section>
 
       <!--==================== PROJECT IN MIND ====================-->
-      <section class="project section">
+      <section class="project section" id="project">
          <div class="project_bg">
             <div class="project_container container grid">
                <div class="project_data">
@@ -560,7 +559,7 @@
       </section>
 
       <!--==================== TESTIMONIAL ====================-->
-      <section class="testimonial section ">
+      <section class="testimonial section " id="testimonial">
           <h2 class="section_title">Testimonial</h2>
          <p class="section_subtitle">My Client Saying</p>
          <div class="testimonial_container container swiper">
@@ -650,7 +649,7 @@
       </section>
 
       <!--==================== CONTACT ME ====================-->
-      <section class="contact section" id="contact">
+      <section class="contact section" id="contact-me">
          <h2 class="section_title">Contact Me</h2>
          <span class="section_subtitle">Get in touch</span>
          <div class="cotact_container container grid">
@@ -748,6 +747,9 @@
          <p class="footer_copy">&copy; Sujeet Kushwaha All right Reserved</p>
       </div>
    </footer>
+   <a href="" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup_icon"></i>
+   </a>
  
    <script src="assets/js/swiper-bundle.min.js"></script>
    <!-- main-js -->

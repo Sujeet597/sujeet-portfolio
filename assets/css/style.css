@@ -15,6 +15,8 @@
    --input-color: hsl(var(--hue-color), 70%, 96%);
    --body-color: hsl(var(--hue-color), 60%, 99%);
    --container-color: #fff;
+   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+   --scroll-thumb-color: hsl(var(--hue-color), 12%, 90%);
 
    /*=========== Font and Typography========== */
    --body-font: "Poppins", sans-serif;
@@ -74,9 +76,33 @@
 }
 
  /* =========== vairable Dark theme ============ */
-
+body.dark-theme{
+  /* HSL COLOR MODE */
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color:hsl(var(--hue-color), 29%, 16%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
 
  /* ============ Button Dark/Light =============== */
+ .nav_btns{
+  display: flex;
+  align-items: center;
+ }
+
+ .change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+ }
+ .change-theme:hover{
+  color: var(--first-color);
+ }
 
 
 
@@ -256,10 +282,16 @@
 
 
  /*=========== Active Link ============= */
-
+.active-link{
+  color: var(--first-color);
+}
 
 
  /* =========== Change Background Color ============ */
+
+ .scroll-header{
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 15);
+ }
 
 
  /* ================ HOME ================ */
@@ -821,4 +853,146 @@ transform: translateX(.25rem);
 
 input, textarea{
   background-color:var(--input-color);
+}
+
+
+
+/*=============== FOOTER ================*/
+.footer{
+  padding-top: 3rem;
+}
+
+.footer_bg{
+  background-color: var(--first-color-second);
+  padding: 2rem 0 3rem;
+}
+
+.footer_title{
+  font-size:var(--h1-font-size) ;
+  margin-bottom: var(--mb-0-25);
+}
+
+.footer_subtitle{
+  font-size: var(--small-font-size);
+}
+
+.footer_links{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.footer_link:hover{
+  color: var(--first-color-lighter);
+}
+
+.footer_social{
+  font-size: 1.25rem;
+  margin-right: var(--mb-1-5);
+}
+
+.footer_social:hover{
+  color: var(--first-color-lighter);
+}
+
+.footer_copy{
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  color: var(--text-color-light);
+  margin-top: var(--mb-3);
+}
+
+.footer_title,
+.footer_subtitle,
+.footer_link,
+.footer_social{
+  color: #fff;
+}
+
+
+/*=================== SCROLL UP ================*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  opacity: .8;
+  padding: 0 .3rem;
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+
+}
+
+.scrollup:hover{
+ background: var(--first-color-alt); 
+}
+
+.scrollup_icon{
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.show-scroll{
+  bottom: 5rem;
+}
+
+/* =========== SCROLL BAR ============== */
+
+::-webkit-scrollbar{
+  width: .60rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--scroll-thumb-color);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--text-color-light);
+}
+
+/* =============== Media Query ==============*/
+/*smla devices*/
+
+@media screen and  (max-width:350px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .nav_menu{
+    padding: 2rem .25rem 4rem;
+  }
+  .nav_list{
+    column-gap: 0;
+  }
+
+  .home_content{
+    grid-template-columns: 25fr 3fr;
+  }
+  .home_blob{
+    width: 180px;
+  }
+  .skills_title{
+    font-size: var(--normal-font-size);
+  }
+  .qualification_data{
+    gap: .5rem;
+  }
+  .services_container{
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+  .services_content{
+    padding-right: 3.5rem;
+  }
+  .services_modal{
+    padding: 0 .5rem;
+  }
+  .project_img{
+    width: 200px;
+  }
 }
